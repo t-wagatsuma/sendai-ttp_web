@@ -1,13 +1,10 @@
 
 body {
   /*
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, "Arial", YuGothic, "ƒqƒ‰ƒMƒmŠpƒS ProN W3", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  font-family: "ŸàƒSƒVƒbƒN", YuGothic, "ƒqƒ‰ƒMƒmŠpƒS Pro", "Hiragino Kaku Gothic Pro", "ƒƒCƒŠƒI", "Meiryo", sans-serif;
-  font-family: ŸàƒSƒVƒbƒN‘Ì, 'Yu Gothic', YuGothic, 'ƒqƒ‰ƒMƒmŠpƒSƒVƒbƒN Pro', 'Hiragino Kaku Gothic Pro', ƒƒCƒŠƒI, Meiryo, Osaka, '‚l‚r ‚oƒSƒVƒbƒN', 'MS PGothic', sans-serif
-  font-family: "SF Pro JP","SF Pro Display","SF Pro Icons","Hiragino Kaku Gothic Pro","ƒqƒ‰ƒMƒmŠpƒS Pro W3","ƒƒCƒŠƒI","Meiryo","‚l‚r ‚oƒSƒVƒbƒN","Helvetica Neue","Helvetica","Arial",sans-serif
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif
   */
 
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif
+  font-family: -apple-system, "mplus-2p-light", sans-serif
 
   /*
   font-size: 16px;
@@ -15,19 +12,16 @@ body {
   background: #ffffff none repeat scroll 0 0;
   */
 }
- 
+
 h1, h2, h3, h4, h5, h6,.h1, .h2, .h3, .h4, .h5, .h6 {
   /*
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, "Arial", YuGothic, "ƒqƒ‰ƒMƒmŠpƒS ProN W3", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  font-family: "ŸàƒSƒVƒbƒN", YuGothic, "ƒqƒ‰ƒMƒmŠpƒS Pro", "Hiragino Kaku Gothic Pro", "ƒƒCƒŠƒI", "Meiryo", sans-serif;
-  font-family: ŸàƒSƒVƒbƒN‘Ì, 'Yu Gothic', YuGothic, 'ƒqƒ‰ƒMƒmŠpƒSƒVƒbƒN Pro', 'Hiragino Kaku Gothic Pro', ƒƒCƒŠƒI, Meiryo, Osaka, '‚l‚r ‚oƒSƒVƒbƒN', 'MS PGothic', sans-serif
-  font-family: "SF Pro JP","SF Pro Display","SF Pro Icons","Hiragino Kaku Gothic Pro","ƒqƒ‰ƒMƒmŠpƒS Pro W3","ƒƒCƒŠƒI","Meiryo","‚l‚r ‚oƒSƒVƒbƒN","Helvetica Neue","Helvetica","Arial",sans-serif
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif
   */
   /*
   font-weight: 300;
   line-height: 1.3;
   */
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif
+  font-family: -apple-system, "mplus-2p-regular", sans-serif
 }
 
 .navbar {
