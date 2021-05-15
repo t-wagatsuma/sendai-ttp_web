@@ -52,7 +52,8 @@
   ga('send', 'pageview');
 
   function tp(path) {
-  	ga('send', 'pageview', path);
+    ga('send','event','download','click', path);
+  	//ga('send', 'pageview', path);
   	return false;
   }
 </script>
