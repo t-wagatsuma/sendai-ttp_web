@@ -1,6 +1,6 @@
 <?php
-require_once('../lib/qdmail.1.2.6b/qdmail.php');
-require_once('../lib/qdsmtp.0.2.0a/qdsmtp.php');
+require_once('../lib/qdmail-php7/qdmail.php');
+require_once('../lib/qdmail-php7/qdsmtp.php');
 
 // シークレットキー
 $secret_key = '6LfnNxUUAAAAAKbh1bqW5mCKcZ5HrhNceEaEEkHU' ;
