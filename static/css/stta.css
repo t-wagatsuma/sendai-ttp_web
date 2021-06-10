@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6,.h1, .h2, .h3, .h4, .h5, .h6 {
 div.stta_header {
   color: #000000;
   background-color: #f8dce0;
-  background-image: url("images/header.gif");
+  background-image: url("/images/header.gif");
   background-repeat: repeat-x;
   height:90px;
 }
@@ -199,4 +199,27 @@ div.stta-news {
 }
 .copyright a:hover {
     color: #acacee;
+}
+.jumbotron {
+    position: relative;
+    height: 150px;
+    min-height: 100px;
+    background: url(/images/jumbotron.png) no-repeat center center;
+    background-size: cover;
+}
+.jumbotron-container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.jumbotron-container h1 {
+	color:#FFFAFA;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1.5);
+    background-image:url(/images/title_3.png);
+    background-repeat: no-repeat;
+    height: 60px;
+    background-size:contain;
+}
+.jumbotron-container a {
+	font-size:14px;
 }
