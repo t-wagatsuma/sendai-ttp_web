@@ -119,7 +119,7 @@ function pfi($key) {
 <?php
 $buf = null;
 if (!empty($v)) { $buf = $v->errors(); }
-if (!empty($buf) || count($buf) > 0 ) {
+if (is_array($buf) && count($buf) > 0 ) {
 ?>
 <div class="alert alert-danger">
   <ul>

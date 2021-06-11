@@ -29,5 +29,6 @@ results:
   name: "第20回 仙台市卓球選手権大会（ダブルス戦）"
   location: "カメイアリーナ仙台"
   dead: "2021-06-05"
+  covid19: true
   file: "仙台市卓球選手権大会-複_R03_要項.pdf"
   office: "仙台市卓球選手権大会-複_R03_申込.xlsx"
