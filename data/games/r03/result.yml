@@ -32,3 +32,12 @@ results:
   covid19: true
   file: "仙台市卓球選手権大会-複_R03_要項.pdf"
   office: "仙台市卓球選手権大会-複_R03_申込.xlsx"
+  result: "仙台市卓球選手権大会-複_R03_結果.pdf"
+  photo:
+   - "xd.jpg"
+   - "xd90.jpg"
+   - "xd120.jpg"
+   - "md.jpg"
+   - "md100.jpg"
+   - "wd.jpg"
+   - "wd100.jpg"
