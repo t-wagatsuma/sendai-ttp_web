@@ -35,8 +35,10 @@
     </p>
   </div>
 
-  {{ range $.Site.Data.games.r03 }} {{ partial "game-article.html" . }} {{ end
-  }}
+  {{ range $.Site.Data.games.r03 }}
+  {{ partial "game-article.html" . }}
+  {{ end }}
 </div>
 
-{{ partial "footer.html" . }} {{ partial "game-script.html" . }}
+{{ partial "footer.html" . }}
+{{ partial "game-script.html" . }}
