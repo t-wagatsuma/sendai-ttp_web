@@ -18,7 +18,7 @@
   {{ if .file }}
   <div class="row" style="margin: 10px">
     <a
-      class="btn btn-default"
+      class="btn btn-primary"
       href="contents/{{.nendo}}/{{.id}}/{{.file}}"
       target="_blank"
       onclick="tp('contents/{{.nendo}}/{{.file}}');"
@@ -38,7 +38,23 @@
       href="contents/{{.nendo}}/{{.id}}/{{.office}}"
       target="_blank"
       onclick="tp('contents/{{.nendo}}/{{.office}}');"
-      >申込フォーム(Excel)</a
+      >申込フォーム</a
+    >
+    {{ end }} {{ if eq .covid19 "adult" }}
+    <a
+      class="btn btn-danger"
+      href="./contents/健康チェックシート兼参加同意書-個人別一般.pdf"
+      target="_blank"
+      onclick="tp('contents/健康チェックシート兼参加同意書-個人別一般.pdf');"
+      >同意書[当日回収]</a
+    >
+    {{ else if eq .covid19 "jh" }}
+    <a
+      class="btn btn-danger"
+      href="./contents/健康チェックシート兼参加同意書-個人別中学.pdf"
+      target="_blank"
+      onclick="tp('contents/健康チェックシート兼参加同意書-個人別中学.pdf');"
+      >同意書[当日回収]</a
     >
     {{ end }} {{ if .result }}
     <a
@@ -47,14 +63,6 @@
       target="_blank"
       onclick="tp('contents/{{.nendo}}/{{.result}}');"
       >結果</a
-    >
-    {{ end }} {{ if .covid19 }}
-    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span
-    ><a
-      href="./contents/大会参加同意書【当日提出】.pdf"
-      target="_blank"
-      onclick="tp('contents/大会参加同意書【当日提出】.pdf');"
-      >大会参加同意書(pdf)</a
     >
     {{ end }}
   </div>

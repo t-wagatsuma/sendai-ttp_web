@@ -1,22 +1,42 @@
 {{ partial "header.html" . }}
 
 <div class="bs-docs-section stta">
-<h2 id="inquiry" class="bg-primary"><span class="glyphicon glyphicon glyphicon-road"></span>&nbsp;大会情報(R03)</h2>
+  <h2 id="inquiry" class="bg-primary">
+    <span class="glyphicon glyphicon glyphicon-road"></span>&nbsp;大会情報(R03)
+  </h2>
 
-<div class="container-fluid">
-   <p>
-      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>今年度より大会申込み方法が変更となりました。<a href="./contents/how-to-entry.pdf" target="_blank" onclick="tp('contents/how-to-entry.pdf');" >大会参加申込み方法(pdf)</a>
-   </p>
-   <p>
-      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>大会当日に同意書の提出が必要です。<a href="./contents/大会参加同意書【当日提出】.pdf" target="_blank" onclick="tp('contents/大会参加同意書【当日提出】.pdf');">大会参加同意書(pdf)</a>
-   </p>
+  <div class="container-fluid">
+    <h3>感染拡大予防への取り組み</h3>
+    <ul>
+      <li>発熱・風邪・倦怠感等の症状がある方のご参加はご遠慮ください。</li>
+      <li>こまめな手洗い、アルコ－ル等による手指消毒を徹底してください。</li>
+      <li>各自マスクの着用をお願いします。(競技中は可能の範囲で)</li>
+      <li>咳エチケット(咳をするときには口を塞ぐ等)に気をつけてください。</li>
+      <li>三蜜(密閉、密集、密接)を避け、大声での会話応援を控えてください。</li>
+      <li>
+        参加者の中に感染者が出た場合には、仙台市の感染対策の調査や措置に協力してください。
+      </li>
+      <li>
+        大会終了後2週間以内に新型コロナウィルス感染症を発症した場合は、主催者に対して速やかに連絡してください。
+      </li>
+    </ul>
+    <h3>大会申込方法</h3>
+    <p>
+      一部の大会を除き、今年度より大会申込み方法が変更となりました。<span
+        class="glyphicon glyphicon-exclamation-sign"
+        aria-hidden="true"
+      ></span
+      ><a
+        href="./contents/how-to-entry.pdf"
+        target="_blank"
+        onclick="tp('contents/how-to-entry.pdf');"
+        >大会参加申込み方法(pdf)</a
+      >
+    </p>
+  </div>
+
+  {{ range $.Site.Data.games.r03 }} {{ partial "game-article.html" . }} {{ end
+  }}
 </div>
 
-{{ range $.Site.Data.games.r03 }}
-   {{ partial "game-article.html" . }}
-{{ end }}
-
-</div>
-
-{{ partial "footer.html" . }}
-{{ partial "game-script.html" . }}
+{{ partial "footer.html" . }} {{ partial "game-script.html" . }}
