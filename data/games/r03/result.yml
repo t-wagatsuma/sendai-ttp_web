@@ -73,3 +73,14 @@ results:
   covid19: "adult"
   file: "仙台市会長杯_R03_要項.pdf"
   office: "仙台市会長杯_R03_申込み.xlsx"
+
+ 20210923:
+  id: 20210923
+  nendo: r03
+  date: "2021-09-23"
+  name: "令和3年度 仙台市秋季卓球リーグ戦(女子)"
+  location: "泉体育館"
+  dead: "2021-09-10"
+  covid19: "adult"
+  file: "仙台市秋季リーグ戦-女子_R03_要項.pdf"
+  office: "仙台市秋季リーグ戦-女子_R03_申込み.xlsx"
