@@ -28,21 +28,21 @@ jobs:
       run: hugo
 
     - name: Delete Ignore Files #delete ignore contents
-      run: rm -rf inquiry sms lib contents/h28 contents/h29 contents/h30 
+      run: rm -rf inquiry sms lib contents/h28 contents/h29 contents/h30
       working-directory: public
-  
+
     - name: Delete Old Files #delete ignore contents
-      run: find . -mtime 10 
+      run: find . -mtime 10
       working-directory: public
-        
+
     - name: Delete Old Files #delete ignore contents
-      run: find . -mtime 10 -exec rm -f {} \; 
+      run: find . -mtime 10 -exec rm -f {} \;
       working-directory: public
-      
+
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
-        server: ${{ secrets.FTP_URL }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: public/
+        ftp-server: ${{ secrets.FTP_URL }}
+        ftp-username: ${{ secrets.FTP_USER }}
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: public
