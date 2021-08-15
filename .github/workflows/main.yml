@@ -40,7 +40,7 @@ jobs:
       working-directory: public
       
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.0.0
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
         ftp-server: ${{ secrets.FTP_URL }}
         ftp-username: ${{ secrets.FTP_USER }}
