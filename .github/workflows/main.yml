@@ -45,4 +45,4 @@ jobs:
         server: ${{ secrets.FTP_URL }}
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: public
+        local-dir: public/
