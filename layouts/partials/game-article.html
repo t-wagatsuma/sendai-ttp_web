@@ -1,4 +1,7 @@
 {{ range sort .results ".id" "desc" }}
+{{/* 変数の一時保管 */}}
+{{ $code := .id }}
+{{ $nendo := .nendo }}
 
 <div class="container-fluid">
   <div class="row">
@@ -7,6 +10,7 @@
     </h3>
   </div>
 
+  {{/* 会場 */}}
   <div class="row">
     <ul>
       <li>会場：{{.location}}</li>
@@ -15,6 +19,8 @@
       {{ end }}
     </ul>
   </div>
+
+  {{/* 大会要項(PDF) */}}
   {{ if .file }}
   <div class="row" style="margin: 10px">
     <a
@@ -24,7 +30,10 @@
       onclick="tp('contents/{{.nendo}}/{{.file}}');"
       >大会要項</a
     >
-    {{ end }} {{ if .form }}
+  {{ end }}
+
+  {{/* 申込み用紙(PDF) */}}
+  {{ if .form }}
     <a
       class="btn btn-info"
       href="contents/{{.nendo}}/{{.id}}/{{.form}}"
@@ -32,15 +41,35 @@
       onclick="tp('contents/{{.nendo}}/{{.form}}');"
       >申込用紙(PDF)</a
     >
-    {{ end }} {{ if .office }}
-    <a
-      class="btn btn-info"
-      href="contents/{{.nendo}}/{{.id}}/{{.office}}"
+  {{ end }}
+
+  {{/* 申込みフォーム */}}
+  {{ if .office }}
+
+    {{/* 配列の場合 */}}
+    {{ if reflect.IsSlice .office }}
+      {{ range .office }}
+        {{ range $label, $file := . }}
+    <a class="btn btn-info"
+      href="contents/{{$nendo}}/{{$code}}/{{$file}}"
+      target="_blank"
+      onclick="tp('contents/{{$nendo}}/{{$file}}');"
+      >{{$label}}</a>
+        {{ end }}
+      {{ end }}
+
+    {{ else }}{{/* 配列ではない */}}
+    <a class="btn btn-info"
+      href="contents/{{.nendo}}/{{.code}}/{{.office}}"
       target="_blank"
       onclick="tp('contents/{{.nendo}}/{{.office}}');"
-      >申込フォーム</a
-    >
-    {{ end }} {{ if eq .covid19 "adult" }}
+      >申込フォーム</a>
+    {{ end }}
+
+  {{ end }}
+
+  {{/* 同意書回収 */}}
+  {{ if eq .covid19 "adult" }}
     <a
       class="btn btn-danger"
       href="./contents/健康チェックシート兼参加同意書-個人別一般.pdf"
@@ -48,7 +77,7 @@
       onclick="tp('contents/健康チェックシート兼参加同意書-個人別一般.pdf');"
       >同意書[当日回収]</a
     >
-    {{ else if eq .covid19 "jh" }}
+  {{ else if eq .covid19 "jh" }}
     <a
       class="btn btn-danger"
       href="./contents/健康チェックシート兼参加同意書-個人別中学.pdf"
@@ -56,7 +85,10 @@
       onclick="tp('contents/健康チェックシート兼参加同意書-個人別中学.pdf');"
       >同意書[当日回収]</a
     >
-    {{ end }} {{ if .result }}
+  {{ end }}
+
+  {{/* 大会結果 */}}
+  {{ if .result }}
     <a
       class="btn btn-success"
       href="contents/{{.nendo}}/{{.id}}/{{.result}}"
@@ -64,22 +96,27 @@
       onclick="tp('contents/{{.nendo}}/{{.result}}');"
       >結果</a
     >
-    {{ end }}
+  {{ end }}
   </div>
+
+  {{/* コメント */}}
   {{ if .comment }}
   <hr />
   <div class="alert alert-warning" role="alert">{{.comment}}&nbsp;</div>
-  {{ end }} {{ $code := .id }} {{ $nendo := .nendo }} {{ if .photo }}
+  {{ end }}
+
+
+  {{ if .photo }}
   <div class="row" style="margin: 5px">
     <div class="gallery">
-      {{ range $i, $p := .photo}}
+      {{ range $i, $file := .photo}}
       <a
-        href="contents/{{ $nendo }}/{{ $code }}/{{ $p }}"
+        href="contents/{{ $nendo }}/{{ $code }}/{{ $file }}"
         data-lightbox="photos"
         ><img
           class="img-fluid"
           style="width: 100px; padding: 1px"
-          src="contents/{{ $nendo }}/{{ $code }}/{{ $p }}"
+          src="contents/{{ $nendo }}/{{ $code }}/{{ $file }}"
       /></a>
       {{ end }}
     </div>
